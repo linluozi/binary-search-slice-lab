@@ -1,0 +1,300 @@
+{
+  "note": "Element copies and reads. Deterministic: depends only on n and the target position. copies_per_n staying flat at ~1.0 is the refutation of the n-log-n claim.",
+  "sizes": [
+    1024,
+    4096,
+    16384,
+    65536,
+    262144
+  ],
+  "positions": [
+    "first",
+    "quarter",
+    "mid",
+    "three_quarter",
+    "last",
+    "absent"
+  ],
+  "table": {
+    "1024": {
+      "first": {
+        "copies": 1023,
+        "slices": 10,
+        "copies_per_n": 0.999,
+        "reads_slicing": 514,
+        "reads_index_closure": 10,
+        "reads_index": 10,
+        "reads_iterative": 10
+      },
+      "quarter": {
+        "copies": 512,
+        "slices": 1,
+        "copies_per_n": 0.5,
+        "reads_slicing": 514,
+        "reads_index_closure": 10,
+        "reads_index": 10,
+        "reads_iterative": 10
+      },
+      "mid": {
+        "copies": 0,
+        "slices": 0,
+        "copies_per_n": 0.0,
+        "reads_slicing": 1,
+        "reads_index_closure": 10,
+        "reads_index": 10,
+        "reads_iterative": 10
+      },
+      "three_quarter": {
+        "copies": 511,
+        "slices": 1,
+        "copies_per_n": 0.499,
+        "reads_slicing": 513,
+        "reads_index_closure": 10,
+        "reads_index": 10,
+        "reads_iterative": 10
+      },
+      "last": {
+        "copies": 1013,
+        "slices": 9,
+        "copies_per_n": 0.9893,
+        "reads_slicing": 513,
+        "reads_index_closure": 11,
+        "reads_index": 11,
+        "reads_iterative": 11
+      },
+      "absent": {
+        "copies": 1013,
+        "slices": 10,
+        "copies_per_n": 0.9893,
+        "reads_slicing": 513,
+        "reads_index_closure": 11,
+        "reads_index": 11,
+        "reads_iterative": 11
+      }
+    },
+    "4096": {
+      "first": {
+        "copies": 4095,
+        "slices": 12,
+        "copies_per_n": 0.9998,
+        "reads_slicing": 2050,
+        "reads_index_closure": 12,
+        "reads_index": 12,
+        "reads_iterative": 12
+      },
+      "quarter": {
+        "copies": 2048,
+        "slices": 1,
+        "copies_per_n": 0.5,
+        "reads_slicing": 2050,
+        "reads_index_closure": 12,
+        "reads_index": 12,
+        "reads_iterative": 12
+      },
+      "mid": {
+        "copies": 0,
+        "slices": 0,
+        "copies_per_n": 0.0,
+        "reads_slicing": 1,
+        "reads_index_closure": 12,
+        "reads_index": 12,
+        "reads_iterative": 12
+      },
+      "three_quarter": {
+        "copies": 2047,
+        "slices": 1,
+        "copies_per_n": 0.4998,
+        "reads_slicing": 2049,
+        "reads_index_closure": 12,
+        "reads_index": 12,
+        "reads_iterative": 12
+      },
+      "last": {
+        "copies": 4083,
+        "slices": 11,
+        "copies_per_n": 0.9968,
+        "reads_slicing": 2049,
+        "reads_index_closure": 13,
+        "reads_index": 13,
+        "reads_iterative": 13
+      },
+      "absent": {
+        "copies": 4083,
+        "slices": 12,
+        "copies_per_n": 0.9968,
+        "reads_slicing": 2049,
+        "reads_index_closure": 13,
+        "reads_index": 13,
+        "reads_iterative": 13
+      }
+    },
+    "16384": {
+      "first": {
+        "copies": 16383,
+        "slices": 14,
+        "copies_per_n": 0.9999,
+        "reads_slicing": 8194,
+        "reads_index_closure": 14,
+        "reads_index": 14,
+        "reads_iterative": 14
+      },
+      "quarter": {
+        "copies": 8192,
+        "slices": 1,
+        "copies_per_n": 0.5,
+        "reads_slicing": 8194,
+        "reads_index_closure": 14,
+        "reads_index": 14,
+        "reads_iterative": 14
+      },
+      "mid": {
+        "copies": 0,
+        "slices": 0,
+        "copies_per_n": 0.0,
+        "reads_slicing": 1,
+        "reads_index_closure": 14,
+        "reads_index": 14,
+        "reads_iterative": 14
+      },
+      "three_quarter": {
+        "copies": 8191,
+        "slices": 1,
+        "copies_per_n": 0.4999,
+        "reads_slicing": 8193,
+        "reads_index_closure": 14,
+        "reads_index": 14,
+        "reads_iterative": 14
+      },
+      "last": {
+        "copies": 16369,
+        "slices": 13,
+        "copies_per_n": 0.9991,
+        "reads_slicing": 8193,
+        "reads_index_closure": 15,
+        "reads_index": 15,
+        "reads_iterative": 15
+      },
+      "absent": {
+        "copies": 16369,
+        "slices": 14,
+        "copies_per_n": 0.9991,
+        "reads_slicing": 8193,
+        "reads_index_closure": 15,
+        "reads_index": 15,
+        "reads_iterative": 15
+      }
+    },
+    "65536": {
+      "first": {
+        "copies": 65535,
+        "slices": 16,
+        "copies_per_n": 1.0,
+        "reads_slicing": 32770,
+        "reads_index_closure": 16,
+        "reads_index": 16,
+        "reads_iterative": 16
+      },
+      "quarter": {
+        "copies": 32768,
+        "slices": 1,
+        "copies_per_n": 0.5,
+        "reads_slicing": 32770,
+        "reads_index_closure": 16,
+        "reads_index": 16,
+        "reads_iterative": 16
+      },
+      "mid": {
+        "copies": 0,
+        "slices": 0,
+        "copies_per_n": 0.0,
+        "reads_slicing": 1,
+        "reads_index_closure": 16,
+        "reads_index": 16,
+        "reads_iterative": 16
+      },
+      "three_quarter": {
+        "copies": 32767,
+        "slices": 1,
+        "copies_per_n": 0.5,
+        "reads_slicing": 32769,
+        "reads_index_closure": 16,
+        "reads_index": 16,
+        "reads_iterative": 16
+      },
+      "last": {
+        "copies": 65519,
+        "slices": 15,
+        "copies_per_n": 0.9997,
+        "reads_slicing": 32769,
+        "reads_index_closure": 17,
+        "reads_index": 17,
+        "reads_iterative": 17
+      },
+      "absent": {
+        "copies": 65519,
+        "slices": 16,
+        "copies_per_n": 0.9997,
+        "reads_slicing": 32769,
+        "reads_index_closure": 17,
+        "reads_index": 17,
+        "reads_iterative": 17
+      }
+    },
+    "262144": {
+      "first": {
+        "copies": 262143,
+        "slices": 18,
+        "copies_per_n": 1.0,
+        "reads_slicing": 131074,
+        "reads_index_closure": 18,
+        "reads_index": 18,
+        "reads_iterative": 18
+      },
+      "quarter": {
+        "copies": 131072,
+        "slices": 1,
+        "copies_per_n": 0.5,
+        "reads_slicing": 131074,
+        "reads_index_closure": 18,
+        "reads_index": 18,
+        "reads_iterative": 18
+      },
+      "mid": {
+        "copies": 0,
+        "slices": 0,
+        "copies_per_n": 0.0,
+        "reads_slicing": 1,
+        "reads_index_closure": 18,
+        "reads_index": 18,
+        "reads_iterative": 18
+      },
+      "three_quarter": {
+        "copies": 131071,
+        "slices": 1,
+        "copies_per_n": 0.5,
+        "reads_slicing": 131073,
+        "reads_index_closure": 18,
+        "reads_index": 18,
+        "reads_iterative": 18
+      },
+      "last": {
+        "copies": 262125,
+        "slices": 17,
+        "copies_per_n": 0.9999,
+        "reads_slicing": 131073,
+        "reads_index_closure": 19,
+        "reads_index": 19,
+        "reads_iterative": 19
+      },
+      "absent": {
+        "copies": 262125,
+        "slices": 18,
+        "copies_per_n": 0.9999,
+        "reads_slicing": 131073,
+        "reads_index_closure": 19,
+        "reads_index": 19,
+        "reads_iterative": 19
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bsearch-slice"
+version = "1.0.0"
+description = "Four binary-search arms, and a measured correction to the 'slicing makes it n log n' claim"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{ name = "linluozi" }]
+keywords = ["binary-search", "algorithm", "benchmark", "cpython", "list-slicing", "complexity"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/linluozi/binary-search-slice-lab"
+Changelog = "https://github.com/linluozi/binary-search-slice-lab/blob/main/docs/CLAIMS.md"
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.7"]
+
+[tool.setuptools]
+packages = ["bsearch"]

@@ -1,0 +1,1167 @@
+{
+  "note": "Median of per-round ratios from one Windows machine. Absolute microseconds are for scale only; ratios are the result.",
+  "python": "3.13.14",
+  "results": [
+    {
+      "n": 16,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.1075,
+        "index_closure": 1.2071,
+        "index": 0.5094,
+        "iterative": 0.4256
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.0906,
+          "p10": 0.081,
+          "p90": 0.117
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 2.1918,
+          "p10": 1.8026,
+          "p90": 2.5388
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2476,
+          "p10": 1.0406,
+          "p90": 1.4199
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 0.2525,
+          "p10": 0.1904,
+          "p90": 0.3184
+        }
+      },
+      "position": "mid",
+      "target": 8
+    },
+    {
+      "n": 64,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.1137,
+        "index_closure": 1.6464,
+        "index": 0.8232,
+        "iterative": 0.619
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.0733,
+          "p10": 0.0613,
+          "p90": 0.0818
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.7511,
+          "p10": 1.6289,
+          "p90": 2.3633
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.349,
+          "p10": 1.1043,
+          "p90": 1.5132
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 0.1746,
+          "p10": 0.1469,
+          "p90": 0.2245
+        }
+      },
+      "position": "mid",
+      "target": 32
+    },
+    {
+      "n": 256,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.1126,
+        "index_closure": 1.9893,
+        "index": 1.2153,
+        "iterative": 0.9383
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.0627,
+          "p10": 0.0435,
+          "p90": 0.0697
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.6248,
+          "p10": 1.4375,
+          "p90": 2.2424
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2061,
+          "p10": 1.0961,
+          "p90": 1.4987
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 0.1237,
+          "p10": 0.1108,
+          "p90": 0.1402
+        }
+      },
+      "position": "mid",
+      "target": 128
+    },
+    {
+      "n": 1024,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.1533,
+        "index_closure": 2.5221,
+        "index": 1.8554,
+        "iterative": 1.4183
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.0633,
+          "p10": 0.0525,
+          "p90": 0.0721
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.4304,
+          "p10": 0.9938,
+          "p90": 1.6839
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2541,
+          "p10": 1.1438,
+          "p90": 1.4019
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 0.1075,
+          "p10": 0.0821,
+          "p90": 0.123
+        }
+      },
+      "position": "mid",
+      "target": 512
+    },
+    {
+      "n": 4096,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.2413,
+        "index_closure": 4.5059,
+        "index": 3.0522,
+        "iterative": 2.4363
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.0522,
+          "p10": 0.0453,
+          "p90": 0.0617
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.421,
+          "p10": 1.1623,
+          "p90": 1.6068
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.3672,
+          "p10": 1.0588,
+          "p90": 1.5826
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 0.1014,
+          "p10": 0.0859,
+          "p90": 0.1096
+        }
+      },
+      "position": "mid",
+      "target": 2048
+    },
+    {
+      "n": 16384,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.217,
+        "index_closure": 4.4135,
+        "index": 3.1858,
+        "iterative": 2.6611
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.0463,
+          "p10": 0.0435,
+          "p90": 0.0535
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.3558,
+          "p10": 1.2687,
+          "p90": 1.5593
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.1927,
+          "p10": 1.1282,
+          "p90": 1.3752
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 0.0806,
+          "p10": 0.0699,
+          "p90": 0.0983
+        }
+      },
+      "position": "mid",
+      "target": 8192
+    },
+    {
+      "n": 65536,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.2159,
+        "index_closure": 4.8321,
+        "index": 3.6579,
+        "iterative": 3.0474
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.0415,
+          "p10": 0.0304,
+          "p90": 0.0542
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.3092,
+          "p10": 1.2426,
+          "p90": 1.4422
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2003,
+          "p10": 1.1139,
+          "p90": 1.5233
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 0.0693,
+          "p10": 0.0526,
+          "p90": 0.0921
+        }
+      },
+      "position": "mid",
+      "target": 32768
+    },
+    {
+      "n": 262144,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.1818,
+        "index_closure": 5.1576,
+        "index": 4.0973,
+        "iterative": 3.255
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.0392,
+          "p10": 0.0333,
+          "p90": 0.0465
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.2158,
+          "p10": 1.1753,
+          "p90": 1.454
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.1786,
+          "p10": 1.0464,
+          "p90": 1.3351
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 0.0562,
+          "p10": 0.0515,
+          "p90": 0.0745
+        }
+      },
+      "position": "mid",
+      "target": 131072
+    },
+    {
+      "n": 1048576,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.2253,
+        "index_closure": 6.0691,
+        "index": 4.6764,
+        "iterative": 3.7435
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.0371,
+          "p10": 0.0292,
+          "p90": 0.044
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.2808,
+          "p10": 1.1858,
+          "p90": 1.4519
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2651,
+          "p10": 1.1076,
+          "p90": 1.4008
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 0.0593,
+          "p10": 0.05,
+          "p90": 0.0659
+        }
+      },
+      "position": "mid",
+      "target": 524288
+    },
+    {
+      "n": 16,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.956,
+        "index_closure": 1.3129,
+        "index": 0.5616,
+        "iterative": 0.432
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.7829,
+          "p10": 0.6051,
+          "p90": 0.8378
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 2.3526,
+          "p10": 2.1421,
+          "p90": 2.7179
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2706,
+          "p10": 1.0721,
+          "p90": 1.3975
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 2.2331,
+          "p10": 1.8185,
+          "p90": 2.3805
+        }
+      },
+      "position": "third",
+      "target": 5
+    },
+    {
+      "n": 64,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 1.6824,
+        "index_closure": 1.7567,
+        "index": 0.985,
+        "iterative": 0.7067
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.9375,
+          "p10": 0.8557,
+          "p90": 1.0267
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.9896,
+          "p10": 1.681,
+          "p90": 2.1811
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.329,
+          "p10": 1.0915,
+          "p90": 1.4555
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 2.4584,
+          "p10": 1.8131,
+          "p90": 2.8639
+        }
+      },
+      "position": "third",
+      "target": 21
+    },
+    {
+      "n": 256,
+      "rounds": 9,
+      "inner": 11718,
+      "abs_us": {
+        "slicing": 2.5366,
+        "index_closure": 2.0494,
+        "index": 1.3508,
+        "iterative": 0.9775
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 1.2262,
+          "p10": 1.0099,
+          "p90": 1.4897
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.5898,
+          "p10": 1.4034,
+          "p90": 2.0311
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2279,
+          "p10": 1.1324,
+          "p90": 1.5747
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 2.7554,
+          "p10": 2.2087,
+          "p90": 3.0292
+        }
+      },
+      "position": "third",
+      "target": 85
+    },
+    {
+      "n": 1024,
+      "rounds": 9,
+      "inner": 2929,
+      "abs_us": {
+        "slicing": 5.6459,
+        "index_closure": 2.6673,
+        "index": 2.1644,
+        "iterative": 1.4456
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 2.1104,
+          "p10": 1.5174,
+          "p90": 2.6168
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.2865,
+          "p10": 1.1352,
+          "p90": 1.6505
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.5159,
+          "p10": 1.1865,
+          "p90": 1.6431
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 3.9007,
+          "p10": 3.1039,
+          "p90": 4.9726
+        }
+      },
+      "position": "third",
+      "target": 341
+    },
+    {
+      "n": 4096,
+      "rounds": 9,
+      "inner": 732,
+      "abs_us": {
+        "slicing": 13.8357,
+        "index_closure": 3.3799,
+        "index": 3.0167,
+        "iterative": 2.0475
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 4.5122,
+          "p10": 3.3182,
+          "p90": 5.3841
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.1361,
+          "p10": 1.0076,
+          "p90": 1.5766
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.4025,
+          "p10": 1.1427,
+          "p90": 1.5453
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 7.4769,
+          "p10": 5.1225,
+          "p90": 11.102
+        }
+      },
+      "position": "third",
+      "target": 1365
+    },
+    {
+      "n": 16384,
+      "rounds": 9,
+      "inner": 183,
+      "abs_us": {
+        "slicing": 62.6574,
+        "index_closure": 4.2169,
+        "index": 3.3454,
+        "iterative": 2.5984
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 14.5967,
+          "p10": 10.3618,
+          "p90": 17.3145
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.2415,
+          "p10": 1.2077,
+          "p90": 1.5489
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2603,
+          "p10": 1.1799,
+          "p90": 1.5052
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 24.1142,
+          "p10": 21.861,
+          "p90": 26.49
+        }
+      },
+      "position": "third",
+      "target": 5461
+    },
+    {
+      "n": 65536,
+      "rounds": 9,
+      "inner": 45,
+      "abs_us": {
+        "slicing": 500.6311,
+        "index_closure": 3.8422,
+        "index": 3.3733,
+        "iterative": 2.8556
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 123.4524,
+          "p10": 77.7552,
+          "p90": 153.9028
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.249,
+          "p10": 1.0795,
+          "p90": 2.0518
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2735,
+          "p10": 1.2308,
+          "p90": 1.3424
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 192.0276,
+          "p10": 150.245,
+          "p90": 240.5188
+        }
+      },
+      "position": "third",
+      "target": 21845
+    },
+    {
+      "n": 262144,
+      "rounds": 9,
+      "inner": 11,
+      "abs_us": {
+        "slicing": 2078.3545,
+        "index_closure": 4.8909,
+        "index": 3.2455,
+        "iterative": 2.4727
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 422.6189,
+          "p10": 313.4674,
+          "p90": 461.2542
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.5543,
+          "p10": 1.3919,
+          "p90": 1.8384
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2537,
+          "p10": 1.1581,
+          "p90": 1.3223
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 823.4853,
+          "p10": 528.742,
+          "p90": 1056.8227
+        }
+      },
+      "position": "third",
+      "target": 87381
+    },
+    {
+      "n": 1048576,
+      "rounds": 9,
+      "inner": 8,
+      "abs_us": {
+        "slicing": 10549.9375,
+        "index_closure": 8.4625,
+        "index": 5.2125,
+        "iterative": 4.0
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 1300.0214,
+          "p10": 1133.3762,
+          "p90": 1447.3907
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.6168,
+          "p10": 1.4677,
+          "p90": 1.8607
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.3123,
+          "p10": 1.0584,
+          "p90": 1.4141
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 2601.5604,
+          "p10": 2238.0767,
+          "p90": 3098.0261
+        }
+      },
+      "position": "third",
+      "target": 349525
+    },
+    {
+      "n": 16,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 0.9639,
+        "index_closure": 1.6929,
+        "index": 0.8154,
+        "iterative": 0.7183
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.5203,
+          "p10": 0.438,
+          "p90": 0.5976
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 2.0401,
+          "p10": 1.8565,
+          "p90": 2.8637
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.1666,
+          "p10": 0.9695,
+          "p90": 1.3183
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 1.2866,
+          "p10": 1.1226,
+          "p90": 1.6531
+        }
+      },
+      "position": "last",
+      "target": 15
+    },
+    {
+      "n": 64,
+      "rounds": 9,
+      "inner": 20000,
+      "abs_us": {
+        "slicing": 1.5414,
+        "index_closure": 2.1783,
+        "index": 1.2581,
+        "iterative": 0.9462
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.7636,
+          "p10": 0.627,
+          "p90": 0.8021
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.6804,
+          "p10": 1.4488,
+          "p90": 2.1706
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.249,
+          "p10": 1.1402,
+          "p90": 1.6141
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 1.5734,
+          "p10": 1.3507,
+          "p90": 1.8912
+        }
+      },
+      "position": "last",
+      "target": 63
+    },
+    {
+      "n": 256,
+      "rounds": 9,
+      "inner": 11718,
+      "abs_us": {
+        "slicing": 2.3374,
+        "index_closure": 2.6335,
+        "index": 1.6169,
+        "iterative": 1.2636
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 0.9119,
+          "p10": 0.7717,
+          "p90": 1.0913
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.6228,
+          "p10": 1.4598,
+          "p90": 1.7641
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2568,
+          "p10": 1.1892,
+          "p90": 1.4843
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 1.9625,
+          "p10": 1.6237,
+          "p90": 2.3202
+        }
+      },
+      "position": "last",
+      "target": 255
+    },
+    {
+      "n": 1024,
+      "rounds": 9,
+      "inner": 2929,
+      "abs_us": {
+        "slicing": 5.8066,
+        "index_closure": 3.5567,
+        "index": 2.3006,
+        "iterative": 2.0183
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 1.4994,
+          "p10": 1.2694,
+          "p90": 2.077
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.4653,
+          "p10": 1.2021,
+          "p90": 1.6246
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.1458,
+          "p10": 0.9764,
+          "p90": 1.4297
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 2.8368,
+          "p10": 2.0679,
+          "p90": 3.2709
+        }
+      },
+      "position": "last",
+      "target": 1023
+    },
+    {
+      "n": 4096,
+      "rounds": 9,
+      "inner": 732,
+      "abs_us": {
+        "slicing": 13.9016,
+        "index_closure": 4.3086,
+        "index": 2.2335,
+        "iterative": 2.3889
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 3.6942,
+          "p10": 3.0562,
+          "p90": 4.22
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.6825,
+          "p10": 1.3338,
+          "p90": 2.028
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2074,
+          "p10": 0.8805,
+          "p90": 1.2922
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 6.9278,
+          "p10": 5.0571,
+          "p90": 8.7628
+        }
+      },
+      "position": "last",
+      "target": 4095
+    },
+    {
+      "n": 16384,
+      "rounds": 9,
+      "inner": 183,
+      "abs_us": {
+        "slicing": 66.3262,
+        "index_closure": 4.271,
+        "index": 3.0743,
+        "iterative": 2.9131
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 15.8609,
+          "p10": 10.1607,
+          "p90": 19.2587
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.3435,
+          "p10": 1.1856,
+          "p90": 2.3124
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.2681,
+          "p10": 0.897,
+          "p90": 1.4937
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 23.4402,
+          "p10": 19.9158,
+          "p90": 42.9251
+        }
+      },
+      "position": "last",
+      "target": 16383
+    },
+    {
+      "n": 65536,
+      "rounds": 9,
+      "inner": 45,
+      "abs_us": {
+        "slicing": 514.42,
+        "index_closure": 5.6156,
+        "index": 4.3511,
+        "iterative": 3.1822
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 94.3521,
+          "p10": 65.739,
+          "p90": 110.3404
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.3505,
+          "p10": 1.0959,
+          "p90": 4.4028
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.3523,
+          "p10": 1.0336,
+          "p90": 1.5592
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 167.5587,
+          "p10": 113.1225,
+          "p90": 269.1611
+        }
+      },
+      "position": "last",
+      "target": 65535
+    },
+    {
+      "n": 262144,
+      "rounds": 9,
+      "inner": 11,
+      "abs_us": {
+        "slicing": 1734.1273,
+        "index_closure": 7.2636,
+        "index": 4.8727,
+        "iterative": 3.7909
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 250.526,
+          "p10": 208.2722,
+          "p90": 356.4287
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 1.5931,
+          "p10": 1.2414,
+          "p90": 1.9133
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.3011,
+          "p10": 1.2272,
+          "p90": 2.1355
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 596.6882,
+          "p10": 412.5221,
+          "p90": 734.7491
+        }
+      },
+      "position": "last",
+      "target": 262143
+    },
+    {
+      "n": 1048576,
+      "rounds": 9,
+      "inner": 8,
+      "abs_us": {
+        "slicing": 9818.85,
+        "index_closure": 10.575,
+        "index": 5.5625,
+        "iterative": 4.0125
+      },
+      "pairs": {
+        "drop slices": {
+          "slow": "slicing",
+          "fast": "index_closure",
+          "median": 933.103,
+          "p10": 710.1334,
+          "p90": 1111.7278
+        },
+        "drop per-call closure": {
+          "slow": "index_closure",
+          "fast": "index",
+          "median": 2.2384,
+          "p10": 1.722,
+          "p90": 3.0356
+        },
+        "drop recursion": {
+          "slow": "index",
+          "fast": "iterative",
+          "median": 1.3687,
+          "p10": 1.2767,
+          "p90": 1.6142
+        },
+        "total (slicing -> iterative)": {
+          "slow": "slicing",
+          "fast": "iterative",
+          "median": 2607.6967,
+          "p10": 2102.8929,
+          "p90": 4251.8475
+        }
+      },
+      "position": "last",
+      "target": 1048575
+    }
+  ]
+}
