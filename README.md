@@ -60,6 +60,13 @@ Neither panel is the "real" answer. A benchmark that probes `data[len//2]` — w
 is what the reviewed write-up does — measures the degenerate case and reports a
 number that only holds there. Report both, or the number means nothing.
 
+![Absolute cost at the middle element](assets/degenerate-mid.png)
+
+In absolute terms the same thing: the baseline sits at ~0.2 µs and barely moves
+with `n`, while every rewrite climbs from 0.4 µs to 4–6 µs. The rewrites are not
+slow — they are paying a fixed setup cost that the baseline never incurs, because
+the baseline is already finished.
+
 ## Only one of the three steps scales with `n`
 
 ![Arm attribution](assets/arm-attribution.png)
